@@ -18,9 +18,10 @@ $ sudo apt-get install python-dev python-pip python-pygame
 $ sudo pip install pypybox2d
 ```
 
-How to run it
+How to run it, after cloning the repository
 
 ```bash
+$ cd robot-sim
 $ python2 run.py assignment.py
 ```
 
