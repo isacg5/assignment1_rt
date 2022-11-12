@@ -27,6 +27,8 @@ $ python2 run.py assignment.py
 Flowchart
 ----------------------
 Flowchart is a diagram that shows each step of the progress of a program in a sequential order. In this case, the flowchart present is the one of the 'assignment.py' file.
+
+The rhombus represent the decisions, the rounded rectangles the sequence of actions and the rectangles the beginning and end of the program.
 ![alt text](https://github.com/isacg5/research_track/blob/main/resources/flowchart.png)
 
 
