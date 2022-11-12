@@ -1,5 +1,6 @@
 Python Robotics Simulator
 ================================
+Done by Isabel Cebollada Gracia.
 
 This is the first assignment of Research Track course, based on a simple and portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
