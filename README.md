@@ -3,6 +3,8 @@ Python Robotics Simulator
 
 This is the first assignment of Research Track course, based on a simple and portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 
+In this assignment, the robot has to take the silver boxes, one by one, and put each one next to a golden box. The way the assignment is done has been putting each silver box next to the closest golden one, to avoid any collision or further problem that could exist in real life.
+
 
 Installing and running
 ----------------------
@@ -27,8 +29,10 @@ Flowchart
 Flowchart is a diagram that shows each step of the progress of a program in a sequential order. In this case, the flowchart present is the one of the 'assignment.py' file.
 ![alt text](https://github.com/isacg5/research_track/blob/main/resources/flowchart.png)
 
+
 Pseudocode
 ----------------------
+Pseudocode is an informal way to descirbe the program done in a simplest and understandable way. Here is presented the pseudocode of the 'assignment.py' file.
 ```python
 while not finished:
     if length_of_ordered_boxes is equal to 12
