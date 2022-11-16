@@ -1,10 +1,7 @@
 Python Robotics Simulator
 ================================
-Done by Isabel Cebollada Gracia.
 
 This is the first assignment of Research Track course, based on a simple and portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
-
-In this assignment, the robot has to take the silver boxes, one by one, and put each one next to a golden box. The way the assignment is done has been putting each silver box next to the closest golden one, to avoid any collision or further problem that could exist in real life.
 
 
 Installing and running
@@ -19,24 +16,35 @@ $ sudo apt-get install python-dev python-pip python-pygame
 $ sudo pip install pypybox2d
 ```
 
-How to run it, after cloning the repository
+How to run it
 
 ```bash
-$ cd robot-sim
 $ python2 run.py assignment.py
 ```
+
+Functions in the code
+----------------------
+To have a better approach to the knowledge of how the code works, the functions that appear in the code are deeply explained here.
+
+- get_velocity(distance): This function calcuilate the linear velocity of the robot depending on the distance. Is used a proportional linear formula, in a way that the farest the robot is, the fastest it will move. Are also considered velocity limits in the case that the robot is too close or too far.
+
+- get_rotation_vel(rot_y): This fuction does the same as get_velocity(distance) but for the angular velocity, using an exponential function for the velocity with respect to rot_y.
+
+- find_closes_gold(): Finds the closest golden token among all the tokens in the world. To do that, it turns counting the golden tokens. Due to the distribution of the world and that the robot is in the middle, if it detects a token closer than the previous and the next one, is directly the closest in all the world. Otherwise, if all the tokens have been seen it stops turning and go directly to the closest one.
+
+- find_token(color, code); This function returns the linear and angular distances and the code of the closest token that the robot can see. To avoid the tokens that it has already manipulated, it checks if the token code is in the array created of ordered tokens (the ones already used). 
+
+- turn(speed, seconds): Sends the angular velocity and the seconds that the robot will turn.
+
+- drive(speed, seconds): Send the linear velocity and the second that the robot will linear move.
 
 Flowchart
 ----------------------
 Flowchart is a diagram that shows each step of the progress of a program in a sequential order. In this case, the flowchart present is the one of the 'assignment.py' file.
-
-The rhombus represent the decisions, the rounded rectangles the sequence of actions and the rectangles the beginning and end of the program.
 ![alt text](https://github.com/isacg5/research_track/blob/main/resources/flowchart.png)
-
 
 Pseudocode
 ----------------------
-Pseudocode is an informal way to descirbe the program done in a simplest and understandable way. Here is presented the pseudocode of the 'assignment.py' file.
 ```python
 while not finished:
     if length_of_ordered_boxes is equal to 12
